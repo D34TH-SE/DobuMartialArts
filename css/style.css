@@ -15,6 +15,9 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto', sans-serif;
 }
+h2 {
+    color : #FFFFFF;
+}
 
 /* Navigation */
 .navbar {
@@ -34,65 +37,29 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--dobu-red) !important;
 }
 #facilities {
-    min-height: 100vh; /* Make this the same height as the hero section */
-    display: flex; /* Use Flexbox for centering */
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
-    text-align: center; /* Center text */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     padding: 40px 0;
 }
-#membership {
-    min-height: 100vh; /* Make this the same height as the hero section */
-    display: flex; /* Use Flexbox for centering */
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
-    text-align: center; /* Center text */
-    padding: 40px 0;
-}
+
 #trainers {
-    min-height: 100vh; /* Make this the same height as the hero section */
-    display: flex; /* Use Flexbox for centering */
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
-    text-align: center; /* Center text */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     padding: 40px 0;
 }
-#about {
-    background-color: #171515;
-    color: white;
-    padding: 100px; /* Default padding for larger screens */
-}
 
-@media (max-width: 768px) {
-    #about {
-        padding: 50px; /* Reduce padding for tablets and smaller screens */
-    }
-
-    .lead {
-        font-size: 1rem; /* Adjust lead font size */
-        line-height: 1.4;
-        padding: 15px; /* Smaller padding for better readability */
-    }
-}
-
-@media (max-width: 576px) {
-    #about {
-        padding: 30px; /* Further reduce padding for small screens */
-        text-align: center; /* Center-align text for better readability */
-    }
-
-    .lead {
-        font-size: 0.9rem; /* Smaller font size on mobile */
-        line-height: 1.3;
-        padding: 10px; /* Adjust padding for mobile */
-    }
-}
 #contact {
-    min-height: 100vh; /* Make this the same height as the hero section */
-    display: flex; /* Use Flexbox for centering */
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
-    text-align: center; /* Center text */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     padding: 40px 0;
 }
 
@@ -121,8 +88,8 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay for better text readability */
-    z-index: 1; /* Places overlay behind text */
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 /* Buttons */
@@ -204,7 +171,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-image {
     flex: 1;
-    background: url('../images/aboutus3.webp') no-repeat center center;
+    background: url('../images/ImageAboutUs.webp') no-repeat center center;
     background-size: cover;
     height: 400px;
     border-radius: 10px;
@@ -252,6 +219,7 @@ h1, h2, h3, h4, h5, h6 {
     .about-content {
         flex-direction: column;
         text-align: center;
+        display: block;
     }
 
     .about-image {
@@ -274,6 +242,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .about-image {
+        display: block;
+        width: 100%;
         height: 250px;
     }
 }
@@ -283,16 +253,14 @@ h1, h2, h3, h4, h5, h6 {
     padding: 60px;
 }
 .facility-title {
-    font-size: 2.5rem; /* Adjust font size as needed */
+    font-size: 2.5rem;
     color: white;
-    /*padding-top: 80px;*/
     position: absolute;
-    top: 20px; /* Or set this to top: 20px; for top-alignment */
+    top: 20px;
     left: 60px;
-    /*width: 100%;*/
     text-align: left;
-    /*padding-bottom: 20px;*/
-    z-index: 10; /* Ensure it appears above other content */
+    z-index: 10;
+    padding-top: 30px;
 }
 
 .facilities-section {
@@ -300,10 +268,10 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: repeat(3, 1fr);
     gap: 60px;
     justify-content: center;
-    padding: 20px;
+    padding: 10px;
     background: black;
     color: #FFFFFF;
-    margin: 80px; /*For Adding space below the title*/
+    margin: 20px;
 }
 
 .facility-box {
@@ -313,9 +281,9 @@ h1, h2, h3, h4, h5, h6 {
     border: 2px solid #000000;
     border-radius: 8px;
     overflow: hidden;
-    width: 300px;   /*Adjusted for better visibility on larger screen*/
+    width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;  /*Add smooth scaling effect */
+    transition: transform 0.3s;
 }
 
 .facility-box img {
@@ -335,15 +303,15 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     width: 100%;
     box-sizing: border-box;
-    font-size: 18px; /* Default font size */
+    font-size: 18px;
     transition: font-size 0.3s;
 }
 
 /* Responsive Design for Facilities Section */
 @media (max-width: 1024px) {
     .facilities-section {
-        grid-template-columns: repeat(2, 1fr); /* Adjust for tablet view */
-        gap: 20px;
+        grid-template-columns: repeat(3, 1fr); /* Adjust for tablet view */
+        gap: 30px;
     }
     .facility-title{
         font-size: 2.2rem;
@@ -353,7 +321,7 @@ h1, h2, h3, h4, h5, h6 {
         width: 220px; /* Smaller size for tablet */
     }
     .facility-name {
-        font-size: 16px; /* Slightly smaller font */
+        font-size: 16px;
     }
 }
 
@@ -364,10 +332,10 @@ h1, h2, h3, h4, h5, h6 {
     .facility-title {
         font-size: 2rem;
         left: 30px;
-        top: 15px;
+        padding-top: 15px;
     }
     .facilities-section {
-        grid-template-columns: 1fr; /* Stack in a single column for mobile */
+        grid-template-columns: 1fr;
         gap: 15px;
     }
     .facilities-section{
@@ -391,7 +359,7 @@ h1, h2, h3, h4, h5, h6 {
     .facility-title {
         font-size: 1.8rem;
         left: 20px;
-        top: 10px;
+        padding-top: 30px;
     }
     .facilities-section {
         padding: 10px;
@@ -401,12 +369,12 @@ h1, h2, h3, h4, h5, h6 {
         gap: 20px;
     }
     .facility-box {
-        width: 100%; /* Ensure full width on very small screens */
+        width: 100%;
         max-width: 280px;
     }
     .facility-name {
-        font-size: 14px; /* Smallest font size for readability on small screens */
-        padding: 8px; /* Adjust padding */
+        font-size: 14px;
+        padding: 8px;
     }
 }
 #classes {
@@ -420,7 +388,8 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2.5rem;
     color: white;
     text-align: left;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    padding-top: 60px;
 }
 
 .classes-container {
@@ -450,7 +419,6 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 4px;
 }
 
-/* Existing class card styles remain the same */
 .class-card {
     background-color: #1a1a1a;
     border-radius: 8px;
@@ -541,6 +509,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 300px;
     perspective: 1000px;
+    background-color: #000000;
 }
 
 .flip-card {
@@ -621,38 +590,300 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-.membership-title {
-    font-size: 2.5rem;
-    color: white;
-    text-align: left;
-    margin-bottom: 50px;
-}
-.membership-card {
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-.membership-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-}
-.card-price {
-    color: #fe0000;
-    font-size: 1.25em;
-    font-weight: bold;
-}
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
 }
+
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.membership-title {
+    text-align: left;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: white;
+    padding-top: 70px;
+}
+
+
+.card {
+    background-color: dimgrey;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+}
+.card-text{
+    color: white;
+}
+
+.card-price {
+    font-size: 1.25rem;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.btn {
+    background-color: #ff0000;
+    border: none;
+    color: #000;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #8a1313;
+}
+
+.popup-form {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-form.active {
+    display: flex;
+}
+
+.form-container {
+    background-color: #1a1a1a;
+    padding: 40px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    margin-top: 50px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.close-btn:hover {
+    color: #ff0000;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    width: 100%;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+}
+.terms-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.terms-container input[type="checkbox"] {
+    margin: 0;
+    accent-color: #000000;
+    transform: scale(1.2);
+}
+
+.terms-container span {
+    line-height: 1;
+    font-size: 14px;
+    color: white;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.submit-btn {
+    margin-top: 20px;
+    color: #000;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #000000;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: row;
+    }
+
+    .popup-form {
+        align-items: flex-start; /* Change from center to top alignment */
+        padding-top: 20px; /* Add some space from the top */
+        overflow-y: auto; /* Allow scrolling if needed */
+    }
+
+    .form-container {
+        padding: 30px;
+        width: 90%;
+        max-width: 450px;
+        margin: 60px auto 20px; /* Add space at bottom */
+        position: relative; /* Ensure positioning context */
+    }
+
+    /* Center-align title */
+    .form-container h2 {
+        font-size: 1.6rem;
+        text-align: center;
+        margin-top: 10px; /* Add space after close button */
+    }
+
+    /* Adjust close button */
+    .close-btn {
+        top: 10px;
+        right: 10px;
+        font-size: 1.3rem;
+    }
+
+    /* Membership title */
+    .membership-title {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    /* Input fields adjustments */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"] {
+        padding: 15px;
+        font-size: 1rem;
+        margin: 8px 0; /* Reduce vertical spacing */
+    }
+
+    .submit-btn {
+        font-size: 1.1rem;
+        padding: 12px;
+        margin-top: 15px;
+    }
+}
+
+/* Mobile Screens (max-width: 500px) */
+@media (max-width: 500px) {
+    .popup-form {
+        padding: 10px;
+        align-items: flex-start;
+        overflow-y: auto;
+    }
+
+    .form-container {
+        padding: 20px;
+        width: 95%;
+        max-width: 400px;
+        margin: 40px auto 20px; /* Reduced top margin */
+        border-radius: 8px; /* Slightly smaller radius */
+    }
+
+    .close-btn {
+        top: 8px;
+        right: 8px;
+        font-size: 1.2rem;
+    }
+
+    .form-container h2 {
+        font-size: 1.4rem;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"] {
+        padding: 12px;
+        font-size: 0.95rem;
+        margin: 6px 0;
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+        padding: 10px;
+        margin-top: 12px;
+    }
+
+    .terms-container {
+        gap: 5px;
+        margin-top: 10px;
+    }
+
+    .terms-container span {
+        font-size: 12px;
+    }
+
+    .membership-title {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
+/* Add this to ensure the form doesn't go under the navigation bar */
+.popup-form.active {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+
+
+
 
 body {
     background-color: #000000;
 }
 
 h1 {
-    font-family: 'Poppins', sans-serif, 'arial';
     font-weight: 600;
     font-size: 72px;
     color: white;
@@ -660,17 +891,16 @@ h1 {
 }
 
 h4 {
-    font-family: 'Roboto', sans-serif, 'arial';
     font-weight: 400;
     font-size: 20px;
     color: #9b9b9b;
     line-height: 1.5;
 }
 
-/* ///// inputs /////*/
+
 
 input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
-    font-size: 0.75em;
+    font-size: 0.70em;
     color: #999;
     top: -5px;
     -webkit-transition: all 0.225s ease;
@@ -693,9 +923,9 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
 
 .styled-input label {
     color: #999;
-    padding: 1.3rem 30px 1rem 30px;
+    padding: 2px 10px;
     position: absolute;
-    top: 10px;
+    top: 15px;
     left: 0;
     -webkit-transition: all 0.25s ease;
     transition: all 0.25s ease;
@@ -711,7 +941,6 @@ input,
 textarea {
     padding: 30px;
     border: 0;
-    width: 100%;
     font-size: 1rem;
     background-color: #2d2d2d;
     color: white;
@@ -745,7 +974,7 @@ textarea {
     margin: 20px auto 25px auto;
 }
 
-.submit-btn {
+.submit-btn  {
     float: right;
     padding: 7px 35px;
     border-radius: 60px;
@@ -799,14 +1028,36 @@ ul {
 .single-cta i {
     color: white;
     font-size: 30px;
-    float: left;
-    margin-top: 8px;
-    margin-right: 10px;
+    /*float: left;*/
+    /*margin-top: 8px;*/
+    margin-right: 15px;
+}
+.single-cta{
+    display: flex;
+    align-items: flex-start;  /* Align items to the top */
+    margin-bottom: 15px;
+}
+.fa-map-marker-alt:before {
+    content: "\f0f3";
 }
 .cta-text {
-    padding-left: 15px;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;  /* Spacing between elements */
 }
+.cta-text .social-icons {
+    display: flex;
+    gap: 10px;
+}
+.cta-text a i {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
 .cta-text h4 {
     color: #fff;
     font-size: 20px;
@@ -846,7 +1097,7 @@ ul {
     display: block;
     font-size: 20px;
     font-weight: 700;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin-bottom: 20px;
 }
 .footer-social-icon a {
@@ -876,6 +1127,21 @@ ul {
     font-weight: 600;
     margin-bottom: 40px;
     position: relative;
+}
+a i {
+    display: inline-block;       /* Ensures the icon is an inline element */
+    width: 40px;                 /* Adjust this for box width */
+    height: 30px;                /* Adjust this for box height */
+    line-height: 40px;           /* Vertically center the icon */
+    font-size: 18px;             /* Size of the actual icon */
+    text-align: center;          /* Centers the icon inside the box */
+    margin: 5px;                 /* Space between each social media icon */
+    color: white;                /* Icon color */
+    border-radius: 5px;          /* Rounded corners (adjust as needed) */
+}
+
+a{
+    text-decoration: none;
 }
 .footer-widget-heading h3::before {
     content: "";
@@ -923,6 +1189,10 @@ ul {
     font-size: 22px;
     transform: rotate(-6deg);
 }
+.subscribe-form button:hover {
+    background: #cc0000;
+}
+
 .copyright-area{
     background: #202020;
     padding: 25px 0;

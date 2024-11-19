@@ -69,3 +69,37 @@ document.getElementById("subscribeButton").addEventListener("click", function() 
         feedbackMessage.textContent = "Please enter a valid email address.";
     }
 });
+// Open the Sign-Up Form
+function openSignUpForm() {
+    document.getElementById('signUpForm').classList.add('active');
+}
+
+// Close the Sign-Up Form
+function closeSignUpForm() {
+    document.getElementById('signUpForm').classList.remove('active');
+}
+
+// Handle Form Submission
+function submitForm(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+    const terms = document.getElementById('terms').checked;
+
+    if (password !== confirmPassword) {
+        alert('Passwords do not match!');
+        return;
+    }
+
+    if (!terms) {
+        alert('Please accept the terms and privacy policy.');
+        return;
+    }
+
+    alert(`Thank you, ${name}! Your registration is successful.`);
+    closeSignUpForm();
+}
+
